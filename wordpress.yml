@@ -19,6 +19,9 @@
     - name: install apache
       yum: name=httpd state=latest
 
+    - name: copy httpd.conf to remote
+      copy: src=./conf/httpd.conf dest=/etc/httpd/conf/
+
     - name: start apache and enabled
       service: name=httpd state=started enabled=yes
 
