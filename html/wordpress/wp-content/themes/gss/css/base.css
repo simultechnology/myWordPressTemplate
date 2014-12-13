@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: none;
+	vertical-align: top;
+}
+
+li {
+	list-style: none;
+}
+
+/*** body ***/
+body {
+	color: #FFF;
+	text-align: center;
+	font-family: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-size: 16px;
+}
+
+.inner {
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+
+/*** container ***/
+#container{
+	margin: 0 auto;
+	text-align: left;
+}
+
+/*** header ***/
+#header h1 {
+	float: left;
+}
+
+#lang_area {
+	float: right;
+	margin-top: 25px;
+}
+
+#lang_area img {
+	float: left;
+	margin-right: 5px;
+}
+
+#search_area {
+	position: absolute;
+	right: 0;
+	top: 52px;
+}
+
+#search_area form input {
+	height: 27px;
+	width: 200px;
+	border: none;
+	background: #EEE;
+	font-size: 25px;
+}
+
+/* menu */
+#menu {
+	height: 40px;
+	background: #2F392A;
+}
+
+#menu ul {
+	width: 1000px;
+	margin: 0 auto;
+	padding-left: 100px;
+}
+
+#menu ul li {
+	float: left;
+	height: 40px;
+	padding: 12px 30px;
+	font-size: 14px;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+/*** contents ***/
+#contents {
+	background: #596B4F;
+}
+
+#main_visual {
+	text-align: center;
+}
+
+#disc_area {
+	background: #2F392B;
+	padding-top: 30px;
+	padding-bottom: 40px; 
+}
+
+#disc_area #discription {
+	width: 660px;
+	float: left;
+	line-height: 2;
+}
+
+#disc_area #youtube {
+	width: 300px;
+	float: right;
+}
+
+#contents h2 {
+	margin-top: 40px;
+}
+
+#dl_news {
+	margin-top: 20px;
+}
+
+#dl_news dt {
+	width: 120px;
+	float: left;
+	line-height: 20px;
+	padding-bottom: 10px;
+}
+
+#dl_news dd {
+	padding-left: 120px;
+	padding-bottom: 10px;
+	line-height: 20px;
+}
+
+#box_contents {
+	margin-top: 50px;
+	padding-bottom: 50px;
+}
+
+.box_content {
+	width: 328px;
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 30px;
+}
+
+.box_content p {
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	background: #555;
+	display: block;
+}
+
+/*** footer ***/
+#footer {
+	background: #596B4F;
+}
+
+#footer .inner {
+	width: 1040px;
+	margin: 0 auto;
+}
+
+#link_area {
+	background: #FFF;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	position: relative;
+}
+
+#img_pagetop {
+	position: absolute;
+	bottom: -30px;
+	right: 30px;
+}
+
+#address_area {
+	padding-bottom: 100px;
+}
+
+#address_area p {
+	padding-top: 40px;
+	font-size: 14px;
+	line-height: 1.7;
+}
+
+/********* float 解除 ********/
+/*IE7以外のモダンブラウザ向け*/
+.clearfix:after{
+	content:".";
+	display:block;
+	clear:both;
+	visibility:hidden;
+	height: 0;
+	}
+
+/*IE7およびMacIE5向け*/
+.clearfix{
+	display:inline-block;
+	}
+
+/*Hides from IE-mac\*/
+* html .clearfix{
+	height:1%;
+	}
+
+/*End hide from IE-mac*/ /*IE6以前向け*/
+.clearfix{
+	display:block;
+	}
