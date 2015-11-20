@@ -26,7 +26,7 @@ $ vagrant up
 ```
 ## Setting of SSH
 ```sh
-$ vagrant ssh-config --host web >> ~/.ssh/config  
+$ vagrant ssh-config --hosts web >> ~/.ssh/config  
 $ chmod 600 ~/.ssh/config
 ```
 
