@@ -26,7 +26,7 @@ $ vagrant up
 ```
 ## Setting of SSH
 ```sh
-$ vagrant ssh-config --hosts web >> ~/.ssh/config  
+$ vagrant ssh-config --host web >> ~/.ssh/config  
 $ chmod 600 ~/.ssh/config
 ```
 
@@ -45,7 +45,7 @@ web
 ### use ansible command 
 ```sh
 # use ping module to host "web"
-$ ansible web -i host -m ping
+$ ansible web -i hosts -m ping
 web | success >> {
     "changed": false,
     "ping": "pong"
