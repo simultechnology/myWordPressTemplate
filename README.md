@@ -45,7 +45,7 @@ web
 ### use ansible command 
 ```sh
 # use ping module to host "web"
-$ ansible web -i host -m ping
+$ ansible web -i hosts -m ping
 web | success >> {
     "changed": false,
     "ping": "pong"
