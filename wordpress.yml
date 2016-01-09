@@ -1,10 +1,12 @@
 ---
 - hosts: web
   sudo: yes
+  vars:
+    - wp_version: 4.4
 
   tasks:
-    - name: add a new user
-      user: name=ishikawa
+    - name: yum update
+      yum: name=* state=latest
 
     - name: install libselinux-python
       yum: name=libselinux-python state=latest
@@ -70,11 +72,11 @@
       mysql_user: name=dbuser password=dbpassword priv=mydb.*:ALL state=present
 
     - name: WordPress Download
-      get_url: url="https://ja.wordpress.org/wordpress-4.3.1-ja.zip" dest=/tmp
+      get_url: url="https://ja.wordpress.org/wordpress-{{ wp_version }}-ja.zip" dest=/tmp
 
     # Unarchive a file that is already on the remote machine
     - name: unarchive wordpress.zip
-      unarchive: src=/tmp/wordpress-4.3.1-ja.zip dest=/vagrant/html copy=no
+      unarchive: src=/tmp/wordpress-{{ wp_version }}-ja.zip dest=/vagrant/html copy=no
 
   handlers:
     - name: restart apache
