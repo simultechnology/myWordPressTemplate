@@ -17,7 +17,7 @@ add folloing part to the file
 ```ruby
 config.vm.box = "centos64"
 config.vm.hostname = "web"
-config.vm.network :private_network, ip: "192.168.33.77"
+config.vm.network :private_network, ip: "192.168.33.25"
 # fixing port is better if you use more than 2 vagrants, otherwise port number can be changed automatically. 
 config.vm.network :forwarded_port, guest: 22, host: 2223
 ```
@@ -26,8 +26,7 @@ $ vagrant up
 ```
 ## Setting of SSH
 ```sh
-$ vagrant ssh-config --host web >> ~/.ssh/config  
-$ chmod 600 ~/.ssh/config
+$ vagrant ssh-config --host web >> ssh_config
 ```
 
 ## Setup Ansible
